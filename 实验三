@@ -1,0 +1,28 @@
+#include<stdio.h>
+void main()
+{
+	int a,i,m;
+	scanf("%d",&a);
+	int b[3],c[3];
+	char id[4][17];
+	for(i=0;i<a;i++)
+	{
+	  scanf("%s %d %d",&id[i],&b[3],&c[3]);
+	}
+	  scanf("%d",&m);
+      int s[3];
+	  for(i=0;i<m;i++) scanf("%d",&s[i]);
+	  for(i=0;i<m;i++)
+	  {
+            int index;
+			for (int k = 0; k < a; k++)
+			{
+				if (s[i] == b[k])
+				{
+					index = k;
+					break;
+				}
+			}
+			printf("%s %d\n", id[index], c[index]);
+	  }
+}
